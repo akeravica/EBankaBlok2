@@ -1,0 +1,10 @@
+c:\users\bana\source\repos\EBanka\Server\bin\Debug\Server.exe.config
+c:\users\bana\source\repos\EBanka\Server\bin\Debug\Server.exe
+c:\users\bana\source\repos\EBanka\Server\bin\Debug\Server.pdb
+c:\users\bana\source\repos\EBanka\Server\bin\Debug\Common.dll
+c:\users\bana\source\repos\EBanka\Server\bin\Debug\Common.pdb
+c:\users\bana\source\repos\EBanka\Server\obj\Debug\Server.csprojAssemblyReference.cache
+c:\users\bana\source\repos\EBanka\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+c:\users\bana\source\repos\EBanka\Server\obj\Debug\Server.csproj.CopyComplete
+c:\users\bana\source\repos\EBanka\Server\obj\Debug\Server.exe
+c:\users\bana\source\repos\EBanka\Server\obj\Debug\Server.pdb

@@ -1,0 +1,10 @@
+c:\users\bana\source\repos\EBanka\Klijent\bin\Debug\Klijent.exe.config
+c:\users\bana\source\repos\EBanka\Klijent\bin\Debug\Klijent.exe
+c:\users\bana\source\repos\EBanka\Klijent\bin\Debug\Klijent.pdb
+c:\users\bana\source\repos\EBanka\Klijent\bin\Debug\Common.dll
+c:\users\bana\source\repos\EBanka\Klijent\bin\Debug\Common.pdb
+c:\users\bana\source\repos\EBanka\Klijent\obj\Debug\Klijent.csprojAssemblyReference.cache
+c:\users\bana\source\repos\EBanka\Klijent\obj\Debug\Klijent.csproj.CoreCompileInputs.cache
+c:\users\bana\source\repos\EBanka\Klijent\obj\Debug\Klijent.csproj.CopyComplete
+c:\users\bana\source\repos\EBanka\Klijent\obj\Debug\Klijent.exe
+c:\users\bana\source\repos\EBanka\Klijent\obj\Debug\Klijent.pdb

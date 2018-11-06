@@ -1,0 +1,6 @@
+c:\users\bana\source\repos\EBanka\Common\bin\Debug\Common.dll
+c:\users\bana\source\repos\EBanka\Common\bin\Debug\Common.pdb
+c:\users\bana\source\repos\EBanka\Common\obj\Debug\Common.csprojAssemblyReference.cache
+c:\users\bana\source\repos\EBanka\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+c:\users\bana\source\repos\EBanka\Common\obj\Debug\Common.dll
+c:\users\bana\source\repos\EBanka\Common\obj\Debug\Common.pdb
