@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Principal;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,163 +15,62 @@ namespace Klijent
         public KlijentServis(NetTcpBinding binding, EndpointAddress address)
             : base(binding, address)
         {
-            IdentityReferenceCollection clGroups = WindowsIdentity.GetCurrent().Groups;
-            string groupName = "";
-            foreach (IdentityReference group in clGroups)
-            {
-                SecurityIdentifier sid = (SecurityIdentifier)group.Translate(typeof(SecurityIdentifier));
-                var name = sid.Translate(typeof(NTAccount));
-                groupName = Formatter.ParseName(name.ToString());    /// return name of the Windows group				
-                if (groupName == "admini" || groupName == "radnik" || groupName == "korisnik")
-                {
-                    break;
-                }
-            }
-
             factory = this.CreateChannel();
         }
 
-        public bool DodajKorisnika(string korisnickoIme, string sifra, string ime, string prezime, int brojRacuna, float novcanaSredstva)
+        public void DodajKorisnika(string korisnickoIme, string sifra, string ime, string prezime, int brojRacuna, float novcanaSredstva)
         {
-            try
-            {
-                return factory.DodajKorisnika(korisnickoIme, sifra, ime, prezime, brojRacuna, novcanaSredstva);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("[DodajKorisnika] Error={0}", e.Message);
-                return false;
-            }
+            throw new NotImplementedException();
         }
 
-        public bool DodajRadnika(string korisnickoIme, string sifra, string ime, string prezime)
+        public void DodajRadnika(string korisnickoIme, string sifra, string ime, string prezime)
         {
-            try
-            {
-                return factory.DodajRadnika(korisnickoIme, sifra, ime, prezime);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("[DodajRadnika] Error={0}", e.Message);
-                return false;
-            }
+            throw new NotImplementedException();
         }
 
-        public bool DodajTransakciju(int brojRacuna, int idTransakcije, float iznos)
+        public void DodajTransakciju(int brojRacuna, int idTransakcije, float iznos)
         {
-            try
-            {
-                return factory.DodajTransakciju(brojRacuna, idTransakcije, iznos);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("[DodajTransakciju] Error={0}", e.Message);
-                return false;
-            }
+            throw new NotImplementedException();
         }
 
-        public bool IzmeniKorisnika(string korisnickoIme, string sifra, string ime, string prezime, int brojRacuna, float novcanaSredstva, float dozvoljeniMinus)
+        public void IzmeniKorisnika(string korisnickoIme, string sifra, string ime, string prezime, int brojRacuna, float novcanaSredstva, float dozvoljeniMinus)
         {
-            try
-            {
-                return factory.IzmeniKorisnika(korisnickoIme, sifra, ime, prezime, brojRacuna, novcanaSredstva, dozvoljeniMinus);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("[IzmeniKorisnika] Error={0}", e.Message);
-                return false;
-            }
+            throw new NotImplementedException();
         }
 
-        public bool IzmeniProviziju(int novaProvizija)
+        public void IzmeniRadnika(string korisnickoIme, string sifra, string ime, string prezime)
         {
-            try
-            {
-                return factory.IzmeniProviziju(novaProvizija);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("[IzmeniProviziju] Error={0}", e.Message);
-                return false;
-            }
+            throw new NotImplementedException();
         }
 
-        public bool IzmeniRadnika(string korisnickoIme, string sifra, string ime, string prezime)
+        public void IzmeniTransakciju(int brojRacuna, int idTransakcije, float iznos)
         {
-            try
-            {
-                return factory.IzmeniRadnika(korisnickoIme, sifra, ime, prezime);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("[IzmeniRadnika] Error={0}", e.Message);
-                return false;
-            }
+            throw new NotImplementedException();
         }
 
-        public bool IzmeniTransakciju(int brojRacuna, int idTransakcije, float iznos)
+        public void ObrisiKorisnika(string korisnickoIme)
         {
-            try
-            {
-                return factory.IzmeniTransakciju(brojRacuna, idTransakcije, iznos);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("[IzmeniTransakciju] Error={0}", e.Message);
-                return false;
-            }
+            throw new NotImplementedException();
         }
 
-        public string ObrisiKorisnika(string korisnickoIme)
+        public void ObrisiRadnika(string korisnickoIme)
         {
-            try
-            {
-                return factory.ObrisiKorisnika(korisnickoIme);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("[ObrisiKorisnika] Error={0}", e.Message);
-                return "";
-            }
+            throw new NotImplementedException();
         }
 
-        public string ObrisiRadnika(string korisnickoIme)
+        public void ObrisiTransakciju(int brojRacuna, int idTransakcije)
         {
-            try
-            {
-                return factory.ObrisiRadnika(korisnickoIme);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("[ObrisiRadnika] Error={0}", e.Message);
-                return "";
-            }
+            throw new NotImplementedException();
         }
 
-        public string ObrisiTransakciju(int brojRacuna, int idTransakcije)
+        public void Dispose()
         {
-            try
+            if (factory != null)
             {
-                return factory.ObrisiTransakciju(brojRacuna, idTransakcije);
+                factory = null;
             }
-            catch (Exception e)
-            {
-                Console.WriteLine("[ObrisiTransakciju] Error={0}", e.Message);
-                return "";
-            }
-        }
 
-        public bool ZahtevZaDozvoljeniMinus()
-        {
-            try
-            {
-                return factory.ZahtevZaDozvoljeniMinus();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("[ZahtevZaDozvoljeniMinus] Error={0}", e.Message);
-                return false;
-            }
+            this.Close();
         }
     }
 }
