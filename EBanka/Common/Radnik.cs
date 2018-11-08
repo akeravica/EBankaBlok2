@@ -18,6 +18,14 @@ namespace Common
         public Radnik()
         {
         }
+
+        public Radnik(string k, string s, string i, string p)
+        {
+            this.korisnickoIme = k;
+            this.sifra = s;
+            this.ime = i;
+            this.prezime = p;
+        }
         [DataMember]
         public string KorisnickoIme
         {

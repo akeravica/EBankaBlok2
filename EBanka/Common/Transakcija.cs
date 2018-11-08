@@ -17,6 +17,11 @@ namespace Common
         {
         }
 
+        public Transakcija(int i, float iz)
+        {
+            this.id = i;
+            this.iznos = iz;
+        }
         [DataMember]
         public int Id
         {

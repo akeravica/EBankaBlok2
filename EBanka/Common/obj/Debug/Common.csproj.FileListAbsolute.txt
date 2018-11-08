@@ -9,3 +9,5 @@ C:\Users\NanaPC\Desktop\EBankaBlok2\EBanka\Common\obj\Debug\Common.dll
 C:\Users\NanaPC\Desktop\EBankaBlok2\EBanka\Common\obj\Debug\Common.pdb
 C:\Users\NanaPC\Desktop\EBankaBlok2\EBanka\Common\bin\Debug\Common.dll
 C:\Users\NanaPC\Desktop\EBankaBlok2\EBanka\Common\bin\Debug\Common.pdb
+C:\Users\NanaPC\Desktop\EBankaBlok2\EBanka\Common\obj\Debug\Common.SecurityManager.ConFile.resources
+C:\Users\NanaPC\Desktop\EBankaBlok2\EBanka\Common\obj\Debug\Common.csproj.GenerateResource.Cache

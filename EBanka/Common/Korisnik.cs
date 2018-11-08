@@ -13,7 +13,7 @@ namespace Common
         string korisnickoIme;
         string sifra = String.Empty;
         string ime;
-        string prezime ;
+        string prezime;
         int brojRacuna;
         float dozvoljeniMinus;
         float novcanaSredstva;
@@ -21,6 +21,16 @@ namespace Common
 
         public Korisnik()
         {
+        }
+
+        public Korisnik(string k, string s, string i, string p, int br, float ns)
+        {
+            this.korisnickoIme = k;
+            this.sifra = s;
+            this.ime = i;
+            this.prezime = p;
+            this.brojRacuna = br;
+            this.novcanaSredstva = ns;
         }
         [DataMember]
         public string KorisnickoIme
@@ -58,12 +68,14 @@ namespace Common
             get { return dozvoljeniMinus; }
             set { dozvoljeniMinus = value; }
         }
+
         [DataMember]
         public float NovcanaSredstva
         {
             get { return novcanaSredstva; }
             set { novcanaSredstva = value; }
         }
+
         [DataMember]
         public List<Transakcija> Transakcije
         {
