@@ -17,17 +17,22 @@ namespace Common
         {
         }
 
+        public Transakcija(int i, float iz)
+        {
+            this.id = i;
+            this.iznos = iz;
+        }
         [DataMember]
         public int Id
         {
-            get => id;
-            set => id = value;
+            get { return id; }
+            set { id = value; }
         }
         [DataMember]
         public float Iznos
         {
-            get => iznos;
-            set => iznos = value;
+            get { return iznos; }
+            set { iznos = value; }
         }
     }
 }

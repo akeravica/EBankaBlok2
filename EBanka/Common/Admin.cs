@@ -18,29 +18,37 @@ namespace Common
         public Admin()
         {
         }
+
+        public Admin(string k, string s, string i, string p)
+        {
+            this.korisnickoIme = k;
+            this.sifra = s;
+            this.ime = i;
+            this.prezime = p;
+        }
         [DataMember]
         public string KorisnickoIme
         {
-            get => korisnickoIme;
-            set => korisnickoIme = value;
+            get { return korisnickoIme; }
+            set { korisnickoIme = value; }
         }
         [DataMember]
         public string Sifra
         {
-            get => sifra;
-            set => sifra = value;
+            get { return sifra; }
+            set { sifra = value; }
         }
         [DataMember]
         public string Ime
         {
-            get => ime;
-            set => ime = value;
+            get { return ime; }
+            set { ime = value; }
         }
         [DataMember]
         public string Prezime
         {
-            get => prezime;
-            set => prezime = value;
+            get { return prezime; }
+            set { prezime = value; }
         }
     }
 }

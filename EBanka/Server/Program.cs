@@ -22,8 +22,11 @@ namespace Server
             host.Description.Behaviors.Remove(typeof(ServiceDebugBehavior));
             host.Description.Behaviors.Add(new ServiceDebugBehavior() { IncludeExceptionDetailInFaults = true });
 
+            host.Authorization.PrincipalPermissionMode = PrincipalPermissionMode.Custom;
+
 
             host.Open();
+
             Console.WriteLine("WCFService is opened. Press <enter> to finish...");
             Console.ReadLine();
 

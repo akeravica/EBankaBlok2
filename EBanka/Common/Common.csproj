@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
@@ -43,11 +44,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Admin.cs" />
+    <Compile Include="Formatter.cs" />
     <Compile Include="IOperacije.cs" />
     <Compile Include="Korisnik.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Radnik.cs" />
+    <Compile Include="SecurityException.cs" />
+    <Compile Include="SecurityManager\ConFile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ConFile.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityManager\CustomAuthorizationManager.cs" />
+    <Compile Include="SecurityManager\CustomAuthorizationPolicy.cs" />
+    <Compile Include="SecurityManager\CustomPrincipal.cs" />
+    <Compile Include="SecurityManager\RolesConfig.cs" />
     <Compile Include="Transakcija.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SecurityManager\ConFile.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ConFile.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

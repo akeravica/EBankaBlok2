@@ -22,49 +22,65 @@ namespace Common
         public Korisnik()
         {
         }
+
+        public Korisnik(string k, string s, string i, string p, int br, float ns)
+        {
+            this.korisnickoIme = k;
+            this.sifra = s;
+            this.ime = i;
+            this.prezime = p;
+            this.brojRacuna = br;
+            this.novcanaSredstva = ns;
+        }
+        [DataMember]
+        public string KorisnickoIme
+        {
+            get { return korisnickoIme; }
+            set { korisnickoIme = value; }
+        }
         [DataMember]
         public string Sifra
         {
-            get => sifra;
-            set => sifra = value;
+            get { return sifra; }
+            set { sifra = value; }
         }
         [DataMember]
         public string Ime
         {
-            get => ime;
-            set => ime = value;
+            get { return ime; }
+            set { ime = value; }
         }
         [DataMember]
         public string Prezime
         {
-            get => prezime;
-            set => prezime = value;
+            get { return prezime; }
+            set { prezime = value; }
         }
         [DataMember]
         public int BrojRacuna
         {
-            get => brojRacuna;
-            set => brojRacuna = value;
+            get { return brojRacuna; }
+            set { brojRacuna = value; }
         }
         [DataMember]
         public float DozvoljeniMinus
         {
-            get => dozvoljeniMinus;
-            set => dozvoljeniMinus = value;
+            get { return dozvoljeniMinus; }
+            set { dozvoljeniMinus = value; }
         }
 
         [DataMember]
         public float NovcanaSredstva
         {
-            get => novcanaSredstva;
-            set => novcanaSredstva = value;
+            get { return novcanaSredstva; }
+            set { novcanaSredstva = value; }
         }
 
         [DataMember]
         public List<Transakcija> Transakcije
         {
-            get => transakcije;
-            set => transakcije = value;
+            get { return transakcije; }
+            set { transakcije = value; }
         }
     }
 }

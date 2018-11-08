@@ -9,37 +9,38 @@ namespace Common
 {
     [ServiceContract]
     public interface IOperacije
-    {
+    { 
+        [OperationContract]
+        bool DodajRadnika(string korisnickoIme, string sifra, string ime, string prezime);
 
         [OperationContract]
-        void DodajRadnika(string korisnickoIme, string sifra, string ime, string prezime);
-        
-        [OperationContract]
-        void IzmeniRadnika(string korisnickoIme, string sifra, string ime, string prezime);
+        bool IzmeniRadnika(string korisnickoIme, string sifra, string ime, string prezime);
 
         [OperationContract]
-        void ObrisiRadnika(string korisnickoIme);
-
-        //menja iznose svih brojeva provizija -> admin
+        string ObrisiRadnika(string korisnickoIme);
 
         [OperationContract]
-        void DodajKorisnika(string korisnickoIme, string sifra, string ime, string prezime, int brojRacuna, float novcanaSredstva);
+        bool IzmeniProviziju(int novaProvizija);
 
         [OperationContract]
-        void IzmeniKorisnika(string korisnickoIme, string sifra, string ime, string prezime, int brojRacuna, float novcanaSredstva, float dozvoljeniMinus); // fali transakcija....
+        bool DodajKorisnika(string korisnickoIme, string sifra, string ime, string prezime, int brojRacuna, float novcanaSredstva);
 
         [OperationContract]
-        void ObrisiKorisnika(string korisnickoIme);
+        bool IzmeniKorisnika(string korisnickoIme, string sifra, string ime, string prezime, int brojRacuna, float novcanaSredstva, float dozvoljeniMinus); // fali transakcija....
 
         [OperationContract]
-        void DodajTransakciju(int brojRacuna, int idTransakcije, float iznos);
+        string ObrisiKorisnika(string korisnickoIme);
 
         [OperationContract]
-        void IzmeniTransakciju(int brojRacuna, int idTransakcije, float iznos);
+        bool DodajTransakciju(int brojRacuna, int idTransakcije, float iznos);
 
         [OperationContract]
-        void ObrisiTransakciju(int brojRacuna, int idTransakcije);
+        bool IzmeniTransakciju(int brojRacuna, int idTransakcije, float iznos);
 
-        //metoda za proviziju i metoda za dozvoljeni minus.....
+        [OperationContract]
+        string ObrisiTransakciju(int brojRacuna, int idTransakcije);
+
+        [OperationContract]
+        bool ZahtevZaDozvoljeniMinus();
     }
 }
